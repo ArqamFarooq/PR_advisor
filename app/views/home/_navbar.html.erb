@@ -10,12 +10,19 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-          <li class="nav-item">
-            <%= link_to 'Log In', root_path, class:'nav-link navall btn btn-outline-success'%>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Sign Up', root_path, class:'nav-link navall btn btn-outline-success'%>
-          </li>
+          <% if !user_signed_in?%>
+            <li class="nav-item">
+              <%= link_to 'Log In', new_user_session_url, class:'nav-link navall btn btn-outline-success'%>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Sign Up', new_user_registration_url, class:'nav-link navall btn btn-outline-success'%>
+            </li>
+          <% end %>
+          <% if user_signed_in?%>
+            <li class="nav-item">
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :destroy, class:'nav-link navall btn btn-outline-success'%>
+            </li>
+          <% end %>
       </ul>
     </div>
   </div>
