@@ -5,7 +5,7 @@
 }
 .navall{
   text-decoration: none;
-  color: black;
+  color: black !important;
   margin-left: 30px;
   font-size: large;
 }
@@ -13,6 +13,7 @@
   border-bottom-style: double;
   border-radius: 5px;
   border: 2px solid #4CAF50;
+  color: black;
 }
 .pad{
   padding-left: 50%;
