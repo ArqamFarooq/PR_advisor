@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  profile_link: MyString
+  user_name: MyString
+  subscriber: 
+
+two:
+  profile_link: MyString
+  user_name: MyString
+  subscriber: 
